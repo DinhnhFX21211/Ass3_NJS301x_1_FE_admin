@@ -5,6 +5,7 @@ export const AdminAPI = {
     try {
       const response = await axiosInstance.get(`admin/info-board`, {
         withCredentials: true,
+        proxy: true,
       });
       return response;
     } catch (error) {
