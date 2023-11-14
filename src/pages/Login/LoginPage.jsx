@@ -29,12 +29,7 @@ function LoginPage(props) {
   };
   const handleUserLogin = (user) => {
     dispatch(AuthActions.onLogin(user));
-    if (currentUser.role.toString() === "Counselor") {
-      navigate("/chat");
-    }
-    if (currentUser.role.toString() === "ADMIN") {
       navigate("/dashboard");
-    }
   };
 
   return (
